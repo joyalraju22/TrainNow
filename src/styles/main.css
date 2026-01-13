@@ -1,0 +1,1411 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+/* =====================
+   GLOBAL
+===================== */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+/* =====================
+   APP / TRAIN SEARCH
+===================== */
+.app {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.search-box input {
+  padding: 8px;
+  width: 60%;
+}
+
+.search-box button {
+  padding: 8px;
+  margin-left: 5px;
+}
+
+.train-card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.progress-container {
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.progress {
+  background: green;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.timeline {
+  text-align: left;
+}
+
+
+/* =====================
+   HOME PAGE – FINAL FIX
+===================== */
+
+.home {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+}
+/* =====================
+   CENTER HERO CONTENT
+===================== */
+.hero-center {
+  position: relative;
+  z-index: 2;
+  height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-text {
+  font-size: 1.45rem;
+  font-weight: 500;
+  margin-bottom: 26px;
+  line-height: 1.6;
+  color: white;
+}
+
+
+.home-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.logo-img {
+  height: 34px;
+  width: auto;
+}
+
+
+/* Dark overlay for readability */
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.35)
+  );
+}
+
+/* Top navigation */
+.home-nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+}
+
+.home-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.home-nav-actions {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-btn {
+  padding: 10px 18px;
+  border: 1.5px solid white;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+
+/* Hero content */
+.home-hero {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 110px 60px;
+}
+
+.home-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.home-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 30px;
+}
+/* Primary CTA */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #22c55e;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.35);
+}
+
+/* GET STARTED BUTTON HOVER EFFECT */
+.btn-primary {
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(34, 197, 94, 0.45);
+}
+
+
+
+.btn-outline,
+.btn-secondary {
+  padding: 12px 22px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* =====================
+   AUTH PAGES (LOGIN / REGISTER)
+===================== */
+.auth-wrapper,
+.auth-container {
+  height: 100vh;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box,
+.auth-card {
+  width: 360px;
+  background: white;
+  padding: 35px 40px;
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-info,
+.auth-subtext {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.auth-box input,
+.auth-card input,
+.auth input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+}
+
+.auth-button,
+.auth-btn,
+.auth button {
+  width: 100%;
+  padding: 10px;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-footer {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.auth-footer a {
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  padding: 15px 25px;
+  color: white;
+}
+
+.logo {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* LOGIN / REGISTER HOVER ANIMATION */
+.nav-btn {
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.logout-btn {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* =====================
+   ANIMATION
+===================== */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SUBTLE BACKGROUND PAN (TRAIN ANIMATION EFFECT) */
+.home {
+  animation: trainPan 40s ease-in-out infinite alternate,
+             trainZoom 40s ease-in-out infinite alternate;
+}
+
+@keyframes trainZoom {
+  from {
+    background-size: 105%;
+  }
+  to {
+    background-size: 110%;
+  }
+}
+
+.fade-in-text {
+  animation: heroFade 1.2s ease forwards;
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   TOP WHITE BAR (REFERENCE STYLE)
+===================== */
+.top-bar {
+  position: relative;
+  z-index: 3;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.top-right {
+  display: flex;
+  gap: 14px;
+}
+
+.top-bar .nav-btn {
+  color: #111827;
+  border: 1.5px solid #d1d5db;
+}
+
+.top-bar .nav-btn.outline {
+  background: #22c55e;
+  color: white;
+  border-color: #22c55e;
+}
+.top-bar {
+  position: relative;
+  z-index: 3;
+  height: 72px;
+
+  /* Ultra-soft glass */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.45)
+  );
+
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+
+  border-bottom: none;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+
+/* FADING BOTTOM EDGE */
+.top-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  width: 100%;
+  height: 60px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+
+  pointer-events: none;
+}
+
+
+
+/* =====================
+   HERO SPLIT LAYOUT
+===================== */
+.hero {
+  position: relative;
+  z-index: 2;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+}
+
+.hero-left {
+  max-width: 520px;
+  padding-left: 80px;
+}
+
+.hero-left h1 {
+  font-size: 3.4rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.hero-left p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  opacity: 0.95;
+}
+
+/* Keep your dark overlay */
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.25)
+  );
+}
+/* CENTER NAV LINKS */
+.top-center {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #111827;
+  opacity: 0.85;
+  position: relative;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+/* ACTIVE PAGE */
+.nav-link.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #22c55e;
+  border-radius: 2px;
+}
+/* =====================
+   SEARCH TRAIN – DESIGN IMPROVEMENTS
+===================== */
+
+/* Page container */
+.app h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #111827;
+}
+
+/* Search box layout */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  padding: 10px 12px;
+  width: 260px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+
+/* Search button */
+.search-box button {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search-box button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(34, 197, 94, 0.3);
+}
+
+/* Result card */
+.train-card {
+  margin-top: 25px;
+  padding: 22px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+/* Train title */
+.train-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+/* Train details */
+.train-card p {
+  margin: 6px 0;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+/* Status colors */
+.status {
+  font-weight: 600;
+}
+
+/* Running On Time */
+.status.runningontime {
+  color: #16a34a; /* green */
+}
+
+/* Delayed / Running Late */
+.status.delayed,
+.status.runninglate {
+  color: #ea580c; /* orange */
+}
+
+/* Arrived */
+.status.arrived {
+  color: #2563eb; /* blue */
+}
+
+/* Smooth card entrance */
+.result-animate {
+  animation: slideFadeIn 0.6s ease forwards;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+/* =====================
+   ROUTE MAP – PROFESSIONAL UI
+===================== */
+
+/* Card refinement */
+.route-card {
+  margin-top: 30px;
+  padding: 28px 30px;
+  border-radius: 14px;
+  background: linear-gradient(
+    to bottom right,
+    #ffffff,
+    #f9fafb
+  );
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Train name header */
+.route-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Timeline container */
+.timeline {
+  margin-top: 10px;
+  position: relative;
+  padding-left: 34px;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #e5e7eb,
+    #d1d5db
+  );
+}
+
+/* Timeline item */
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+  opacity: 0;
+  animation: fadeUp 0.45s ease forwards;
+}
+
+/* Station dot */
+.timeline-item .dot {
+  width: 14px;
+  height: 14px;
+  background: #9ca3af;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Station name */
+.station-name {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* CURRENT STATION HIGHLIGHT */
+.timeline-item.active .dot {
+  background: #22c55e;
+  box-shadow:
+    0 0 0 5px rgba(34, 197, 94, 0.25),
+    0 6px 16px rgba(34, 197, 94, 0.35);
+  transform: scale(1.15);
+}
+
+.timeline-item.active .station-name {
+  font-weight: 600;
+  color: #16a34a;
+}
+
+/* Subtle hover (optional but nice) */
+.timeline-item:hover .station-name {
+  color: #111827;
+}
+
+/* Smooth appearance */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* =====================
+   SEARCH TRAIN – PROFESSIONAL UI
+===================== */
+
+/* Page title */
+.app h2 {
+  font-size: 1.9rem;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+/* Search container */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+/* Input */
+.search-box input {
+  width: 280px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #d1d5db;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+}
+
+/* Button */
+.search-box button {
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(
+    to right,
+    #22c55e,
+    #16a34a
+  );
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(34, 197, 94, 0.35);
+}
+
+/* Result card */
+.train-card {
+  margin-top: 30px;
+  padding: 26px 28px;
+  border-radius: 16px;
+  background: linear-gradient(
+    to bottom right,
+    #ffffff,
+    #f9fafb
+  );
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Train title */
+.train-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Train details */
+.train-card p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* STATUS COLORS */
+.status {
+  font-weight: 600;
+}
+
+/* Running On Time */
+.status.runningontime {
+  color: #16a34a;
+}
+
+/* Delayed */
+.status.delayed,
+.status.runninglate {
+  color: #ea580c;
+}
+
+/* Arrived */
+.status.arrived {
+  color: #2563eb;
+}
+
+/* Smooth appearance */
+.result-animate {
+  animation: slideFadeIn 0.5s ease forwards;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.station-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-row {
+  font-size: 0.85rem;
+  color: #6b7280;
+  display: flex;
+  gap: 15px;
+  margin-top: 4px;
+}
+
+.timeline-item.active .time-row {
+  color: #16a34a;
+  font-weight: 500;
+}
+/* GLASS TOP BAR (USED IN HOME + SEARCH) */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* LOGO */
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 32px;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* CENTER NAV */
+.top-center {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #22c55e;
+}
+
+/* RIGHT */
+.top-right {
+  display: flex;
+  gap: 12px;
+}
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    #22c55e,
+    #d1fae5
+  );
+  border-radius: 5px;
+  animation: growLine 1.2s ease-out;
+}
+
+@keyframes growLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.timeline-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.timeline-item .dot {
+  width: 28px;
+  height: 28px;
+  background: white;
+  border: 3px solid #22c55e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.timeline-item.active .dot {
+  background: #22c55e;
+  color: white;
+  transform: scale(1.15);
+}
+
+.timeline-item.start .dot {
+  border-color: #3b82f6;
+}
+
+.timeline-item.end .dot {
+  border-color: #ef4444;
+}
+/* ROUTE MAP CARD */
+.route-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 35px;
+  margin-top: 25px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #22c55e, #bbf7d0);
+  border-radius: 4px;
+}
+
+/* TIMELINE ITEM */
+.timeline-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* DOT */
+.dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* CURRENT STATION */
+.timeline-item.active .dot {
+  background: #22c55e;
+  color: white;
+  transform: scale(1.15);
+}
+
+/* START / END */
+.timeline-item.start .dot {
+  border-color: #3b82f6;
+}
+.timeline-item.end .dot {
+  border-color: #ef4444;
+}
+
+/* STATION DETAILS */
+.station-details strong {
+  font-size: 1.05rem;
+  color: #111827;
+}
+
+.time-row {
+  display: flex;
+  gap: 18px;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+/* LIVE STATUS – GOVERNMENT STYLE */
+
+.live-status-card {
+  padding: 20px;
+}
+
+.live-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 12px;
+}
+
+.train-number {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* STATUS COLORS (NTES STYLE) */
+.status.runningontime {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.delayed {
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.status.runninglate {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status.arrived {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.live-body {
+  margin-top: 16px;
+}
+
+.live-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.live-row span {
+  color: #6b7280;
+}
+
+.live-footer {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: right;
+}
+/* JOURNEY PLANNER – GOVERNMENT STYLE */
+
+.section-title {
+  margin-bottom: 10px;
+}
+
+.journey-panel {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.panel-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.journey-search {
+  gap: 14px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.journey-btn {
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.error-text {
+  color: #dc2626;
+  margin-top: 10px;
+}
+
+/* JOURNEY RESULT CARD */
+
+.journey-result {
+  margin-top: 16px;
+}
+
+.journey-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.journey-info span {
+  display: block;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.journey-info strong {
+  font-size: 0.95rem;
+  color: #111827;
+}
+/* GOVERNMENT JOURNEY PLANNER */
+
+.journey-panel {
+  border: 1px solid #cbd5e1;
+  padding: 16px;
+  background: #ffffff;
+  margin-bottom: 20px;
+}
+
+.journey-form {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.journey-form td {
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.journey-form td:first-child {
+  width: 160px;
+  font-weight: 600;
+}
+
+.journey-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #94a3b8;
+  border-radius: 2px;
+}
+
+.gov-btn {
+  padding: 8px 16px;
+  background: #0f766e;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.gov-btn:hover {
+  background: #115e59;
+}
+
+/* RESULT TABLE */
+
+.gov-result {
+  border: 1px solid #cbd5e1;
+  padding: 14px;
+  margin-top: 16px;
+  background: #f8fafc;
+}
+
+.gov-result table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.gov-result td {
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+.gov-result td:first-child {
+  width: 160px;
+  font-weight: 600;
+  color: #374151;
+}
+/* IMPROVED GOVERNMENT-STYLE SUGGESTIONS */
+
+.suggestion-box {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #94a3b8;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+/* Each row */
+.suggestion-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+/* Hover – official blue */
+.suggestion-item:hover {
+  background: #eef4ff;
+}
+
+/* Layout inside row */
+.suggestion-content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Left small badge */
+.station-code {
+  background: #1e3a8a;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 6px;
+  border-radius: 2px;
+}
+
+/* Text block */
+.station-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.station-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.station-sub {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Scrollbar subtle */
+.suggestion-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestion-box::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+/* Search Train input wrapper */
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Force suggestion below input */
+.search-input-wrapper .suggestion-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+/* JOURNEY PLANNER – PRIMARY GREEN BUTTON (LIKE GET STARTED) */
+
+.journey-primary-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(34, 197, 94, 0.35);
+  transition: all 0.25s ease;
+}
+
+.journey-primary-btn:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(34, 197, 94, 0.45);
+}
+
+.journey-primary-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.35);
+}
