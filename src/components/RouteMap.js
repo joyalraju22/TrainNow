@@ -80,11 +80,9 @@ const routeData = {
 function RouteMap() {
   const [train, setTrain] = useState(null);
 
-  /* Auto-load selected train with validation + persistence */
   useEffect(() => {
     const selected = localStorage.getItem("selectedTrain");
 
-    // ✅ Route integrity validation (RS14)
     if (!selected || !routeData[selected]?.route?.length) {
       setTrain(null);
       return;
@@ -93,7 +91,6 @@ function RouteMap() {
     const selectedRoute = routeData[selected];
     setTrain(selectedRoute);
 
-    // ✅ Persist last viewed route (RS11)
     localStorage.setItem(
       "lastViewedRoute",
       JSON.stringify(selectedRoute)
@@ -102,11 +99,11 @@ function RouteMap() {
 
   return (
     <div className="app fade-in">
-      <h2>Route Map</h2>
+      <h2>Train Route Information</h2>
 
       {!train && (
         <div className="train-card">
-          <p style={{ color: "#6b7280" }}>
+          <p style={{ color: "#6b7280", textAlign: "center" }}>
             🚆 No train selected.
             <br />
             Please search a train to view its route.
@@ -115,13 +112,28 @@ function RouteMap() {
       )}
 
       {train && (
-        <div className="train-card timeline-card route-card">
-          <h3>🚆 {train.name}</h3>
+        <div className="train-card route-card">
+          {/* HEADER */}
+          <div style={{ marginBottom: "18px" }}>
+            <h3>🚆 {train.name}</h3>
+            <p style={{ fontSize: "0.9rem", color: "#6b7280" }}>
+              Current Location:{" "}
+              <strong style={{ color: "#0f766e" }}>
+                {train.currentStation}
+              </strong>
+            </p>
+          </div>
 
+          {/* LEGEND */}
+          <div style={{ fontSize: "0.8rem", color: "#6b7280", marginBottom: "14px" }}>
+            🚩 Start &nbsp;&nbsp; 🚆 Current &nbsp;&nbsp; 🏁 Destination
+          </div>
+
+          {/* TIMELINE */}
           <div className="timeline">
             {train.route.map((stop, index) => {
               const currentIndex = train.route.findIndex(
-                (s) => s.station === train.currentStation
+                s => s.station === train.currentStation
               );
 
               const isCurrent = stop.station === train.currentStation;
@@ -132,10 +144,10 @@ function RouteMap() {
               return (
                 <div
                   key={index}
-                  className={`timeline-item 
-                    ${isCurrent ? "active" : ""} 
+                  className={`timeline-item
+                    ${isCurrent ? "active" : ""}
                     ${isCompleted ? "completed" : ""}
-                    ${isStart ? "start" : ""} 
+                    ${isStart ? "start" : ""}
                     ${isEnd ? "end" : ""}`}
                 >
                   <span className="dot">

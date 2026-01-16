@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-/* ROUTE DATA (same logic as RouteMap) */
+/* ROUTE DATA */
 const routeData = {
   "12627": {
     name: "Karnataka Express",
@@ -69,7 +69,7 @@ const routeData = {
   }
 };
 
-/* ✅ UNIQUE STATION LIST (FOR AUTO-SUGGEST) */
+/* UNIQUE STATIONS */
 const allStations = Array.from(
   new Set(Object.values(routeData).flatMap(train => train.route))
 );
@@ -85,37 +85,47 @@ function JourneyPlanner() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  /* AUTO-SUGGEST HANDLERS */
+  /* OFFLINE FALLBACK */
+  useEffect(() => {
+    if (!navigator.onLine) {
+      const cached = JSON.parse(localStorage.getItem("lastJourney"));
+      if (cached) {
+        setResults(cached);
+      }
+    }
+  }, []);
+
+  /* AUTO-SUGGEST */
   const handleFromChange = (value) => {
     setFrom(value);
     setError("");
 
-    if (value.length < 2) {
+    if (value.trim().length < 2) {
       setFromSuggestions([]);
       return;
     }
 
-    const filtered = allStations.filter(station =>
-      station.toLowerCase().includes(value.toLowerCase())
+    setFromSuggestions(
+      allStations
+        .filter(s => s.toLowerCase().includes(value.toLowerCase()))
+        .slice(0, 5)
     );
-
-    setFromSuggestions(filtered.slice(0, 5));
   };
 
   const handleToChange = (value) => {
     setTo(value);
     setError("");
 
-    if (value.length < 2) {
+    if (value.trim().length < 2) {
       setToSuggestions([]);
       return;
     }
 
-    const filtered = allStations.filter(station =>
-      station.toLowerCase().includes(value.toLowerCase())
+    setToSuggestions(
+      allStations
+        .filter(s => s.toLowerCase().includes(value.toLowerCase()))
+        .slice(0, 5)
     );
-
-    setToSuggestions(filtered.slice(0, 5));
   };
 
   /* PLAN JOURNEY */
@@ -123,19 +133,29 @@ function JourneyPlanner() {
     setError("");
     setResults([]);
 
-    if (!from || !to) {
+    const fromClean = from.trim();
+    const toClean = to.trim();
+
+    if (!fromClean || !toClean) {
       setError("Please enter both From and To stations");
+      return;
+    }
+
+    if (fromClean.toLowerCase() === toClean.toLowerCase()) {
+      setError("From and To stations cannot be the same");
       return;
     }
 
     const matches = [];
 
     Object.entries(routeData).forEach(([number, train]) => {
+      if (!Array.isArray(train.route)) return;
+
       const fromIndex = train.route.findIndex(
-        s => s.toLowerCase() === from.toLowerCase()
+        s => s.toLowerCase() === fromClean.toLowerCase()
       );
       const toIndex = train.route.findIndex(
-        s => s.toLowerCase() === to.toLowerCase()
+        s => s.toLowerCase() === toClean.toLowerCase()
       );
 
       if (fromIndex !== -1 && toIndex !== -1 && fromIndex < toIndex) {
@@ -150,14 +170,28 @@ function JourneyPlanner() {
 
     if (matches.length === 0) {
       setError("No direct trains found for this journey");
-    } else {
-      setResults(matches);
+      return;
     }
+
+    setResults(matches);
+
+    /* SAVE FOR OFFLINE */
+    localStorage.setItem("lastJourney", JSON.stringify(matches));
+
+    /* AUDIT LOG */
+    localStorage.setItem(
+      "journeyAudit",
+      JSON.stringify({
+        from: fromClean,
+        to: toClean,
+        searchedAt: new Date().toISOString()
+      })
+    );
   };
 
   return (
     <>
-      {/* TOP NAV BAR */}
+      {/* TOP BAR */}
       <header className="top-bar">
         <div className="top-left">
           <img
@@ -195,115 +229,157 @@ function JourneyPlanner() {
         </div>
       </header>
 
-      {/* JOURNEY PLANNER CONTENT */}
+      {/* CONTENT */}
       <div className="app fade-in">
-  <h2 className="section-title">Journey Planner</h2>
+        <h2 className="section-title">Journey Planner</h2>
 
-  <div className="journey-panel">
-  <table className="journey-form">
-    <tbody>
-      <tr>
-        <td>From Station</td>
-        <td>
-          <input
-            type="text"
-            value={from}
-            onChange={(e) => handleFromChange(e.target.value)}
-          />
-          {fromSuggestions.length > 0 && (
-  <div className="suggestion-box">
-    {fromSuggestions.map((station, index) => (
-      <div
-        key={index}
-        className="suggestion-item"
-        onClick={() => {
-          setFrom(station);
-          setFromSuggestions([]);
-        }}
-      >
-        <div className="suggestion-content">
-  <div className="station-code">STN</div>
-  <div className="station-text">
-    <div className="station-name">{station}</div>
-    <div className="station-sub">Railway Station</div>
-  </div>
-</div>
+        <div className="journey-panel">
+          <table className="journey-form">
+            <tbody>
+              <tr>
+                <td>From Station</td>
+                <td>
+                  <div className="search-input-wrapper">
+                    <input
+                      type="text"
+                      value={from}
+                      onChange={(e) => handleFromChange(e.target.value)}
+                    />
+                    {fromSuggestions.length > 0 && (
+                      <div className="suggestion-box">
+                        {fromSuggestions.map((s, i) => (
+                          <div
+                            key={i}
+                            className="suggestion-item"
+                            onClick={() => {
+                              setFrom(s);
+                              setFromSuggestions([]);
+                            }}
+                          >
+                            <div className="suggestion-content">
+                              <div className="station-code">STN</div>
+                              <div className="station-text">
+                                <div className="station-name">{s}</div>
+                                <div className="station-sub">Railway Station</div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>To Station</td>
+                <td>
+                  <div className="search-input-wrapper">
+                    <input
+                      type="text"
+                      value={to}
+                      onChange={(e) => handleToChange(e.target.value)}
+                    />
+                    {toSuggestions.length > 0 && (
+                      <div className="suggestion-box">
+                        {toSuggestions.map((s, i) => (
+                          <div
+                            key={i}
+                            className="suggestion-item"
+                            onClick={() => {
+                              setTo(s);
+                              setToSuggestions([]);
+                            }}
+                          >
+                            <div className="suggestion-content">
+                              <div className="station-code">STN</div>
+                              <div className="station-text">
+                                <div className="station-name">{s}</div>
+                                <div className="station-sub">Railway Station</div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <button className="gov-btn" onClick={planJourney}>
+                    Search Trains
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {error && <p className="error-text">{error}</p>}
+
+        {results.map((train) => (
+  <div key={train.number} className="gov-result fade-in">
+
+    {/* HEADER */}
+    <div style={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      borderBottom: "1px solid #cbd5e1",
+      paddingBottom: "8px",
+      marginBottom: "10px"
+    }}>
+      <strong style={{ fontSize: "1rem", color: "#0f172a" }}>
+        🚆 {train.name}
+      </strong>
+      <span style={{ fontSize: "0.85rem", color: "#475569" }}>
+        Train No: {train.number}
+      </span>
+    </div>
+
+    {/* JOURNEY STRIP */}
+    <div style={{
+      background: "#e6fffa",
+      border: "1px solid #99f6e4",
+      borderRadius: "4px",
+      padding: "8px 12px",
+      marginBottom: "12px",
+      fontWeight: 600,
+      color: "#065f46"
+    }}>
+      {train.from} → {train.to}
+    </div>
+
+    {/* DETAILS GRID */}
+    <div className="journey-info">
+      <div>
+        <span>From Station</span>
+        <strong>{train.from}</strong>
       </div>
-    ))}
-  </div>
-)}
 
-        </td>
-      </tr>
+      <div>
+        <span>To Station</span>
+        <strong>{train.to}</strong>
+      </div>
 
-      <tr>
-        <td>To Station</td>
-        <td>
-          <input
-            type="text"
-            value={to}
-            onChange={(e) => handleToChange(e.target.value)}
-          />
-          {toSuggestions.length > 0 && (
-            <div className="suggestion-box">
-              {toSuggestions.map((station, i) => (
-                <div
-                  key={i}
-                  className="suggestion-item"
-                  onClick={() => {
-                    setTo(station);
-                    setToSuggestions([]);
-                  }}
-                >
-                  🚉 {station}
-                </div>
-              ))}
-            </div>
-          )}
-        </td>
-      </tr>
+      <div>
+        <span>Journey Type</span>
+        <strong>Direct</strong>
+      </div>
 
-      <tr>
-        <td></td>
-        <td>
-          <button className="gov-btn" onClick={planJourney}>
-            Search Trains
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+      <div>
+        <span>Data Source</span>
+        <strong>Demo / Simulation</strong>
+      </div>
+    </div>
 
-  {error && <p className="error-text">{error}</p>}
-
-  {results.map((train) => (
-  <div key={train.number} className="gov-result">
-    <table>
-      <tbody>
-        <tr>
-          <td>Train Name</td>
-          <td>{train.name}</td>
-        </tr>
-        <tr>
-          <td>Train Number</td>
-          <td>{train.number}</td>
-        </tr>
-        <tr>
-          <td>From Station</td>
-          <td>{train.from}</td>
-        </tr>
-        <tr>
-          <td>To Station</td>
-          <td>{train.to}</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 ))}
 
-</div>
-
+      </div>
     </>
   );
 }
