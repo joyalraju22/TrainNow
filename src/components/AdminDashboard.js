@@ -1,103 +1,229 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+  import { useEffect, useState } from "react";
+  import { useNavigate } from "react-router-dom";
 
-function AdminDashboard() {
-  const navigate = useNavigate();
-  // ✅ Used stats to drive the UI and setStats to load data
-  const [stats, setStats] = useState({ trains: 0, users: 0, status: "Active" });
+  function AdminDashboard() {
+    const navigate = useNavigate();
+    const [stats, setStats] = useState({ trains: 0, users: 0 });
 
-  /* 🔒 ADMIN PROTECTION & DATA LOADING */
-  useEffect(() => {
-    if (!localStorage.getItem("isAdmin")) {
+    /* 🔒 ADMIN PROTECTION */
+    useEffect(() => {
+      if (!localStorage.getItem("isAdmin")) {
+        navigate("/login");
+        return;
+      }
+
+      const savedTrains =
+        JSON.parse(localStorage.getItem("adminTrains")) || [];
+      const userCount = localStorage.getItem("user") ? 1 : 0;
+
+      setStats({
+        trains: savedTrains.length,
+        users: userCount,
+      });
+    }, [navigate]);
+
+    const handleLogout = () => {
+      localStorage.removeItem("isAdmin");
       navigate("/login");
-      return;
-    }
+    };
 
-    // Load actual counts from localStorage
-    const savedTrains = JSON.parse(localStorage.getItem("adminTrains")) || [];
-    const userCount = localStorage.getItem("user") ? 1 : 0;
+    const getSystemHealth = () => {
+      if (stats.trains > 0)
+        return { color: "#10b981", text: "Healthy", icon: "✓" };
+      return { color: "#f59e0b", text: "Limited Data", icon: "⚠" };
+    };
 
-    // ✅ Calling setStats to resolve the 'no-unused-vars' warning
-    setStats({
-      trains: savedTrains.length,
-      users: userCount,
-      status: "Operational"
-    });
-  }, [navigate]);
+    const health = getSystemHealth();
 
-  const handleLogout = () => {
-    localStorage.removeItem("isAdmin");
-    navigate("/login");
-  };
+    /* ===== STYLES ===== */
 
-  return (
-    <div className="admin-layout" style={{ display: "flex", minHeight: "100vh", background: "#f8fafc" }}>
-      
-      {/* SIDEBAR */}
-      <aside style={{ width: "260px", background: "#1e293b", color: "white", padding: "24px", display: "flex", flexDirection: "column" }}>
-        <div style={{ marginBottom: "40px" }}>
-          <h2 style={{ fontSize: "1.5rem", color: "#38bdf8" }}>TrainNow</h2>
-          <p style={{ fontSize: "0.8rem", opacity: 0.6 }}>Admin Control Panel</p>
-        </div>
-        
-        <nav style={{ flex: 1, display: "flex", flexDirection: "column", gap: "10px" }}>
-          <button className="sidebar-link active">📊 Dashboard</button>
-          <button className="sidebar-link" onClick={() => navigate("/admin/trains")}>🚆 Manage Trains</button>
-          <button className="sidebar-link">🛣️ Manage Routes</button>
-          <button className="sidebar-link">👥 User Management</button>
-        </nav>
+    const glassCardStyle = {
+      background: "rgba(0,0,0,0.6)",
+      backdropFilter: "blur(20px)",
+      border: "1px solid rgba(212,175,55,0.3)",
+      borderRadius: "18px",
+      padding: "40px",
+      textAlign: "center",
+      boxShadow: "0 20px 60px rgba(0,0,0,0.7)",
+    };
 
-        <button 
-          onClick={handleLogout}
-          style={{ background: "#ef4444", color: "white", border: "none", padding: "12px", borderRadius: "6px", cursor: "pointer", fontWeight: "600" }}
+    const glassPanelStyle = {
+      background: "rgba(0,0,0,0.6)",
+      backdropFilter: "blur(20px)",
+      border: "1px solid rgba(212,175,55,0.3)",
+      borderRadius: "18px",
+      padding: "40px",
+      boxShadow: "0 20px 60px rgba(0,0,0,0.7)",
+    };
+
+    const cardTitle = {
+      fontSize: "1rem",
+      textTransform: "uppercase",
+      letterSpacing: "0.08em",
+      color: "#d4af37",
+      marginBottom: "15px",
+    };
+
+    const bigNumber = {
+      fontSize: "3rem",
+      fontWeight: "700",
+    };
+
+    const goldButtonStyle = {
+      padding: "14px 28px",
+      background: "linear-gradient(135deg, #d4af37, #b8962e)",
+      color: "#000",
+      borderRadius: "12px",
+      border: "none",
+      cursor: "pointer",
+      fontWeight: "600",
+    };
+
+    /* ===== RETURN ===== */
+
+    return (
+      <div
+        style={{
+          position: "relative",
+          height: "100vh",
+          overflow: "hidden",
+          color: "white",
+        }}
+      >
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            transform: "scale(1.08)",
+            zIndex: 0,
+          }}
         >
-          Logout Admin
-        </button>
-      </aside>
+          <source
+            src={`${process.env.PUBLIC_URL}/videos/hero.mp4`}
+            type="video/mp4"
+          />
+        </video>
 
-      {/* MAIN CONTENT AREA */}
-      <main style={{ flex: 1, padding: "40px" }}>
-        <header style={{ marginBottom: "32px" }}>
-          <h1 style={{ fontSize: "1.8rem", color: "#0f172a" }}>System Overview</h1>
-          <p style={{ color: "#64748b" }}>Real-time statistics for the railway network.</p>
-        </header>
+        {/* Overlay */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(90deg, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.6) 100%)",
+            zIndex: 1,
+          }}
+        />
 
-        {/* METRICS GRID */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "24px" }}>
-          
-          <div className="metric-card">
-            <span style={{ fontSize: "0.85rem", color: "#64748b", fontWeight: "600" }}>TOTAL TRAINS</span>
-            <div style={{ fontSize: "2rem", fontWeight: "700", margin: "10px 0" }}>{stats.trains}</div>
-            <span style={{ color: "#10b981", fontSize: "0.8rem" }}>● Currently in database</span>
+        {/* Content */}
+        <div
+          style={{
+            position: "relative",
+            zIndex: 2,
+            padding: "100px 5%",
+            maxWidth: "1400px",
+            margin: "0 auto",
+          }}
+        >
+          {/* Top Bar */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginBottom: "50px",
+            }}
+          >
+            <h1 style={{ fontSize: "2.8rem", fontWeight: "700" }}>
+              Admin <span style={{ color: "#d4af37" }}>Control Panel</span>
+            </h1>
+
+            <button
+              onClick={handleLogout}
+              style={{
+                padding: "12px 20px",
+                background: "rgba(255,0,0,0.15)",
+                border: "1px solid #ef4444",
+                color: "#ef4444",
+                borderRadius: "8px",
+                cursor: "pointer",
+                fontWeight: "600",
+              }}
+            >
+              Logout
+            </button>
           </div>
 
-          <div className="metric-card">
-            <span style={{ fontSize: "0.85rem", color: "#64748b", fontWeight: "600" }}>REGISTERED USERS</span>
-            <div style={{ fontSize: "2rem", fontWeight: "700", margin: "10px 0" }}>{stats.users}</div>
-            <span style={{ color: "#3b82f6", fontSize: "0.8rem" }}>● Active accounts</span>
+          {/* Stats */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns:
+                "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "30px",
+              marginBottom: "50px",
+            }}
+          >
+            <div style={glassCardStyle}>
+              <h3 style={cardTitle}>Total Trains</h3>
+              <p style={bigNumber}>{stats.trains}</p>
+            </div>
+
+            <div style={glassCardStyle}>
+              <h3 style={cardTitle}>Registered Users</h3>
+              <p style={bigNumber}>{stats.users}</p>
+            </div>
+
+            <div style={glassCardStyle}>
+              <h3 style={cardTitle}>System Status</h3>
+              <p style={{ ...bigNumber, color: health.color }}>
+                {health.icon} {health.text}
+              </p>
+            </div>
           </div>
 
-          <div className="metric-card">
-            <span style={{ fontSize: "0.85rem", color: "#64748b", fontWeight: "600" }}>SYSTEM STATUS</span>
-            <div style={{ fontSize: "1.5rem", fontWeight: "700", margin: "10px 0", color: "#10b981" }}>{stats.status}</div>
-            <div className="pulse-indicator"></div>
-          </div>
+          {/* Quick Actions */}
+          <div style={glassPanelStyle}>
+            <h2 style={{ marginBottom: "25px", fontSize: "1.5rem" }}>
+              Quick <span style={{ color: "#d4af37" }}>
+                Admin Actions
+              </span>
+            </h2>
 
+            <div
+              style={{
+                display: "flex",
+                gap: "20px",
+                flexWrap: "wrap",
+              }}
+            >
+              <button
+                onClick={() => navigate("/admin/trains")}
+                style={goldButtonStyle}
+              >
+                Manage Trains
+              </button>
+
+              <button
+                onClick={() => navigate("/")}
+                style={goldButtonStyle}
+              >
+                View Public Site
+              </button>
+            </div>
+          </div>
         </div>
-      </main>
+      </div>
+    );
+  }
 
-      <style>{`
-        .sidebar-link { background: transparent; border: none; color: #94a3b8; padding: 12px; text-align: left; cursor: pointer; border-radius: 6px; transition: 0.2s; }
-        .sidebar-link:hover { background: #334155; color: white; }
-        .sidebar-link.active { background: #38bdf8; color: #0f172a; font-weight: bold; }
-        
-        .metric-card { background: white; padding: 24px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: relative; overflow: hidden; }
-        
-        .pulse-indicator { width: 8px; height: 8px; background: #10b981; border-radius: 50%; position: absolute; top: 24px; right: 24px; box-shadow: 0 0 0 rgba(16, 185, 129, 0.4); animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0px rgba(16, 185, 129, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0px rgba(16, 185, 129, 0); } }
-      `}</style>
-    </div>
-  );
-}
-
-export default AdminDashboard;
+  export default AdminDashboard;

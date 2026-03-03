@@ -1,18 +1,45 @@
-const trains = [
-  {
-    trainNo: "12627",
-    trainName: "Karnataka Express",
-    currentStation: "Nagpur",
-    nextStation: "Bhopal",
-    delay: "10 min late",
-    progress: 65,
-    route: [
-      { station: "Bangalore", time: "19:20" },
-      { station: "Nagpur", time: "06:30" },
-      { station: "Bhopal", time: "11:00" },
-      { station: "Delhi", time: "10:05" }
-    ]
-  }
-];
+const trains = {
+  // --- KERALA FOCUSED TRAINS (Top 100) ---
+  "12625": { "name": "Kerala Express", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "12:15" }, { "code": "NDLS", "station": "New Delhi", "arr": "13:30", "dep": "None" }] },
+  "12617": { "name": "Mangala Lakshadweep Express", "route": [{ "code": "ERS", "station": "Ernakulam Junction", "arr": "None", "dep": "13:25" }, { "code": "NZM", "station": "Hazrat Nizamuddin", "arr": "13:15", "dep": "None" }] },
+  "16346": { "name": "Netravati Express", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "09:15" }, { "code": "LTT", "station": "Lokmanya Tilak Terminus", "arr": "17:05", "dep": "None" }] },
+  "16525": { "name": "Island Express", "route": [{ "code": "CAPE", "station": "Kanniyakumari", "arr": "None", "dep": "10:10" }, { "code": "SBC", "station": "KSR Bengaluru City", "arr": "07:00", "dep": "None" }] },
+  "16629": { "name": "Malabar Express", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "18:40" }, { "code": "MAQ", "station": "Mangaluru Central", "arr": "10:20", "dep": "None" }] },
+  "16302": { "name": "Venad Express", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "05:20" }, { "code": "SRR", "station": "Shoranur Junction", "arr": "12:25", "dep": "None" }] },
+  "17230": { "name": "Sabari Express", "route": [{ "code": "SC", "station": "Secunderabad Junction", "arr": "None", "dep": "12:20" }, { "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "18:05", "dep": "None" }] },
+  "16307": { "name": "Executive Express", "route": [{ "code": "ALLP", "station": "Alappuzha", "arr": "None", "dep": "15:50" }, { "code": "CAN", "station": "Kannur", "arr": "00:30", "dep": "None" }] },
+  "16301": { "name": "Venad Express (Return)", "route": [{ "code": "SRR", "station": "Shoranur Junction", "arr": "None", "dep": "14:35" }, { "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "22:25", "dep": "None" }] },
+  "16630": { "name": "Malabar Express (Return)", "route": [{ "code": "MAQ", "station": "Mangaluru Central", "arr": "None", "dep": "18:15" }, { "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "09:05", "dep": "None" }] },
+  "16649": { "name": "Parasuram Express", "route": [{ "code": "MAQ", "station": "Mangaluru Central", "arr": "None", "dep": "05:05" }, { "code": "NCJ", "station": "Nagercoil Junction", "arr": "21:25", "dep": "None" }] },
+  "16650": { "name": "Parasuram Express (Return)", "route": [{ "code": "NCJ", "station": "Nagercoil Junction", "arr": "None", "dep": "04:15" }, { "code": "MAQ", "station": "Mangaluru Central", "arr": "21:00", "dep": "None" }] },
+  "16303": { "name": "Vanchinad Express", "route": [{ "code": "ERS", "station": "Ernakulam Junction", "arr": "None", "dep": "05:05" }, { "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "10:00", "dep": "None" }] },
+  "16304": { "name": "Vanchinad Express (Return)", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "17:45" }, { "code": "ERS", "station": "Ernakulam Junction", "arr": "22:55", "dep": "None" }] },
+  "16603": { "name": "Maveli Express", "route": [{ "code": "MAQ", "station": "Mangaluru Central", "arr": "None", "dep": "17:30" }, { "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "06:20", "dep": "None" }] },
+  "16604": { "name": "Maveli Express (Return)", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "19:25" }, { "code": "MAQ", "station": "Mangaluru Central", "arr": "08:15", "dep": "None" }] },
+  "16605": { "name": "Ernad Express", "route": [{ "code": "MAQ", "station": "Mangaluru Central", "arr": "None", "dep": "07:20" }, { "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "20:50", "dep": "None" }] },
+  "16606": { "name": "Ernad Express (Return)", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "03:35" }, { "code": "MAQ", "station": "Mangaluru Central", "arr": "17:50", "dep": "None" }] },
+  "12075": { "name": "Jan Shatabdi Express", "route": [{ "code": "CLT", "station": "Kozhikode", "arr": "None", "dep": "08:00" }, { "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "15:00", "dep": "None" }] },
+  "12076": { "name": "Jan Shatabdi Express (Return)", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "05:55" }, { "code": "CLT", "station": "Kozhikode", "arr": "12:55", "dep": "None" }] },
+  "12081": { "name": "Jan Shatabdi Express", "route": [{ "code": "CAN", "station": "Kannur", "arr": "None", "dep": "04:50" }, { "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "14:10", "dep": "None" }] },
+  "12082": { "name": "Jan Shatabdi Express (Return)", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "14:50" }, { "code": "CAN", "station": "Kannur", "arr": "00:25", "dep": "None" }] },
+  "20631": { "name": "Vande Bharat Express", "route": [{ "code": "MAQ", "station": "Mangaluru Central", "arr": "None", "dep": "06:00" }, { "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "15:05", "dep": "None" }] },
+  "20632": { "name": "Vande Bharat Express (Return)", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "16:05" }, { "code": "MAQ", "station": "Mangaluru Central", "arr": "01:00", "dep": "None" }] },
+  "20633": { "name": "Vande Bharat Express", "route": [{ "code": "KGQ", "station": "Kasaragod", "arr": "None", "dep": "14:30" }, { "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "22:35", "dep": "None" }] },
+  "20634": { "name": "Vande Bharat Express (Return)", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "05:20" }, { "code": "KGQ", "station": "Kasaragod", "arr": "13:20", "dep": "None" }] },
+  "12301": { "name": "Howrah Rajdhani Express", "route": [{ "code": "HWH", "station": "Howrah Junction", "arr": "None", "dep": "16:50" }, { "code": "NDLS", "station": "New Delhi", "arr": "10:00", "dep": "None" }] },
+  "12951": { "name": "Mumbai Rajdhani Express", "route": [{ "code": "MMCT", "station": "Mumbai Central", "arr": "None", "dep": "17:00" }, { "code": "NDLS", "station": "New Delhi", "arr": "08:32", "dep": "None" }] },
+  "12431": { "name": "Trivandrum Rajdhani Express", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "19:15" }, { "code": "NZM", "station": "Hazrat Nizamuddin", "arr": "05:55", "dep": "None" }] },
+  "12002": { "name": "Bhopal Shatabdi Express", "route": [{ "code": "NDLS", "station": "New Delhi", "arr": "None", "dep": "06:00" }, { "code": "RKMP", "station": "Rani Kamalapati", "arr": "14:40", "dep": "None" }] },
+  "12262": { "name": "Howrah - Mumbai Duronto", "route": [{ "code": "HWH", "station": "Howrah Junction", "arr": "None", "dep": "05:45" }, { "code": "CSMT", "station": "Mumbai CSM Terminus", "arr": "08:15", "dep": "None" }] },
+  "22415": { "name": "Varanasi Vande Bharat", "route": [{ "code": "BSB", "station": "Varanasi Junction", "arr": "None", "dep": "15:00" }, { "code": "NDLS", "station": "New Delhi", "arr": "23:05", "dep": "None" }] },
+  // --- NEWLY ADDED KERALA TRAINS ---
+  "17042": { "name": "TVC-Charlapalli Amrit Bharat", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "16:15" }, { "code": "CHZ", "station": "Charlapalli", "arr": "23:45", "dep": "None" }] },
+  "16330": { "name": "NCJ-Mangaluru Amrit Bharat", "route": [{ "code": "NCJ", "station": "Nagercoil Junction", "arr": "None", "dep": "06:30" }, { "code": "MAJN", "station": "Mangaluru Junction", "arr": "19:15", "dep": "None" }] },
+  "16122": { "name": "TVC-Tambaram Amrit Bharat", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "14:30" }, { "code": "TBM", "station": "Tambaram", "arr": "06:15", "dep": "None" }] },
+  "17229": { "name": "Sabari Express", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "06:45" }, { "code": "SC", "station": "Secunderabad Junction", "arr": "12:20", "dep": "None" }] },
+  "16343": { "name": "Amritha Express", "route": [{ "code": "TVC", "station": "Thiruvananthapuram Central", "arr": "None", "dep": "20:30" }, { "code": "MDU", "station": "Madurai Junction", "arr": "06:10", "dep": "None" }] },
+  "16335": { "name": "Gandhidham - Nagercoil Express", "route": [{ "code": "GIMB", "station": "Gandhidham Junction", "arr": "None", "dep": "10:35" }, { "code": "NCJ", "station": "Nagercoil Junction", "arr": "06:15", "dep": "None" }] },
+  "16355": { "name": "Antyodaya Express", "route": [{ "code": "KCVL", "station": "Kochuveli", "arr": "None", "dep": "14:50" }, { "code": "MAJN", "station": "Mangaluru Junction", "arr": "09:15", "dep": "None" }] }
+};
 
 export default trains;

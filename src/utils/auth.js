@@ -11,9 +11,15 @@ export const loginUser = (user) => {
 
 export const logoutUser = () => {
   localStorage.removeItem("auth");
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
 };
 
 export const isAuthenticated = () => {
-  const auth = JSON.parse(localStorage.getItem("auth"));
+  // Check for token first (new auth system)
+  const token = localStorage.getItem("token");
+  if (token) return true;
+  // Fallback to old auth key
+  const auth = JSON.parse(localStorage.getItem("auth") || "{}");
   return auth?.loggedIn === true;
 };

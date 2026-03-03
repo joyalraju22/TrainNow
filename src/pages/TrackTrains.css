@@ -1,0 +1,157 @@
+/* TrackTrains.css */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap');
+
+.track-trains-page {
+    animation: fadeIn 0.8s ease-out;
+    font-family: 'Outfit', sans-serif;
+}
+
+.page-title {
+    animation: slideDownFade 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+}
+
+.page-subtitle {
+    animation: slideDownFade 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+    animation-delay: 0.15s;
+}
+
+.train-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: slideUpFade 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+}
+
+.train-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.6) !important;
+}
+
+/* Base transition for interactive elements */
+.gold-btn,
+.outline-btn,
+.favorite-btn,
+.top-row-anim,
+.time-anim,
+.status-anim,
+.btn-anim {
+    transition: all 0.3s ease;
+}
+
+.gold-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.gold-btn:hover {
+    background: linear-gradient(135deg, #eadd7a 0%, #d4af37 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.outline-btn:hover {
+    background: rgba(212, 175, 55, 0.1) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #eadd7a !important;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.2);
+}
+
+.live-dot-pulse {
+    animation: pulse 1.5s infinite;
+}
+
+/* Stagger animations for card interiors */
+.top-row-anim {
+    animation: fadeInRight 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+}
+
+.time-anim {
+    animation: fadeInRight 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+    animation-delay: 0.1s;
+}
+
+.status-anim {
+    animation: fadeInRight 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+    animation-delay: 0.2s;
+}
+
+.btn-anim {
+    animation: fadeInUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+    animation-delay: 0.3s;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+    }
+}

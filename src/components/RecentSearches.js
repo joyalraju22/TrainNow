@@ -37,12 +37,9 @@ function RecentSearches() {
 
   if (recentTrains.length === 0) {
     return (
-      <div
-        className="train-card"
-        style={{ marginTop: "30px", color: "#6b7280" }}
-      >
+      <div className="recent-searches-empty">
         <h3>🕘 Recent Searches</h3>
-        <p style={{ fontSize: "0.9rem" }}>
+        <p>
           No recent train searches available.
           <br />
           Your last searched trains will appear here.
@@ -52,76 +49,44 @@ function RecentSearches() {
   }
 
   return (
-    <div className="train-card fade-in" style={{ marginTop: "30px" }}>
+    <div className="recent-searches-card fade-in">
       
       {/* HEADER */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: "12px"
-        }}
-      >
+      <div className="recent-searches-header">
         <div>
-          <h3 style={{ marginBottom: "2px" }}>🕘 Recent Train Searches</h3>
-          <p style={{ fontSize: "0.8rem", color: "#6b7280" }}>
-            Last 5 enquiries
-          </p>
+          <h3>🕘 Recent Train Searches</h3>
+          <p className="recent-searches-subtitle">Last 5 enquiries</p>
         </div>
 
-        <button
-          onClick={clearHistory}
-          style={{
-            background: "transparent",
-            border: "none",
-            color: "#dc2626",
-            fontSize: "0.8rem",
-            cursor: "pointer"
-          }}
-        >
+        <button onClick={clearHistory} className="recent-searches-clear-btn">
           Clear
         </button>
       </div>
 
       {/* LIST */}
-      {recentTrains.map((train, index) => (
-        <div
-          key={index}
-          onClick={() => handleView(train.train || train.number)}
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "12px 14px",
-            marginBottom: "8px",
-            borderRadius: "6px",
-            background: "#f9fafb",
-            border: "1px solid #e5e7eb",
-            cursor: "pointer"
-          }}
-        >
-          <div>
-            <strong>
-              {trainDirectory[train.train || train.number] || "Train"} (
-              {train.train || train.number})
-            </strong>
-            <div style={{ fontSize: "0.8rem", color: "#6b7280" }}>
-              Searched at {train.time}
-            </div>
-          </div>
-
-          <span
-            style={{
-              fontSize: "0.85rem",
-              color: "#0f766e",
-              fontWeight: 600
-            }}
+      <div className="recent-searches-list">
+        {recentTrains.map((train, index) => (
+          <div
+            key={index}
+            onClick={() => handleView(train.train || train.number)}
+            className="recent-search-item"
           >
-            View →
-          </span>
-        </div>
-      ))}
+            <div className="recent-search-content">
+              <strong className="recent-search-title">
+                {trainDirectory[train.train || train.number] || "Train"} (
+                {train.train || train.number})
+              </strong>
+              <div className="recent-search-time">
+                Searched at {train.time}
+              </div>
+            </div>
+
+            <span className="recent-search-action">
+              View →
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,1689 @@
+[
+  {
+    "name": "New Delhi",
+    "code": "NDLS",
+    "city": "Delhi",
+    "lat": 28.6402816,
+    "lng": 77.2204103
+  },
+  {
+    "name": "Old Delhi",
+    "code": "DLI",
+    "city": "Delhi",
+    "lat": 28.660932,
+    "lng": 77.2276494
+  },
+  {
+    "name": "Hazrat Nizamuddin",
+    "code": "NZM",
+    "city": "Delhi",
+    "lat": 28.5864131,
+    "lng": 77.2529822
+  },
+  {
+    "name": "Mumbai Central",
+    "code": "BCT",
+    "city": "Mumbai",
+    "lat": 19.07283,
+    "lng": 72.88261
+  },
+  {
+    "name": "Chhatrapati Shivaji Terminus",
+    "code": "CSTM",
+    "city": "Mumbai",
+    "lat": 19.07283,
+    "lng": 72.88261
+  },
+  {
+    "name": "Dadar",
+    "code": "DR",
+    "city": "Mumbai",
+    "lat": 19.0173769,
+    "lng": 72.8428598
+  },
+  {
+    "name": "Chennai Central",
+    "code": "MAS",
+    "city": "Chennai",
+    "lat": 13.0825901,
+    "lng": 80.2763077
+  },
+  {
+    "name": "Chennai Egmore",
+    "code": "MS",
+    "city": "Chennai",
+    "lat": 13.07694,
+    "lng": 80.26417
+  },
+  {
+    "name": "Howrah Junction",
+    "code": "HWH",
+    "city": "Kolkata",
+    "lat": 22.5827943,
+    "lng": 88.3423933
+  },
+  {
+    "name": "Sealdah",
+    "code": "SDAH",
+    "city": "Kolkata",
+    "lat": 22.56263,
+    "lng": 88.36304
+  },
+  {
+    "name": "Bangalore City",
+    "code": "SBC",
+    "city": "Bangalore",
+    "lat": 12.97194,
+    "lng": 77.59369
+  },
+  {
+    "name": "Yesvantpur",
+    "code": "YPR",
+    "city": "Bangalore",
+    "lat": 12.97194,
+    "lng": 77.59369
+  },
+  {
+    "name": "Hyderabad Deccan",
+    "code": "HYB",
+    "city": "Hyderabad",
+    "lat": 17.38405,
+    "lng": 78.45636
+  },
+  {
+    "name": "Secunderabad",
+    "code": "SC",
+    "city": "Hyderabad",
+    "lat": 17.4339579,
+    "lng": 78.5018052
+  },
+  {
+    "name": "Ahmedabad Junction",
+    "code": "ADI",
+    "city": "Ahmedabad",
+    "lat": 23.0251063,
+    "lng": 72.6018905
+  },
+  {
+    "name": "Pune Junction",
+    "code": "PUNE",
+    "city": "Pune",
+    "lat": 18.51957,
+    "lng": 73.85535
+  },
+  {
+    "name": "Nagpur",
+    "code": "NGP",
+    "city": "Nagpur",
+    "lat": 21.1523731,
+    "lng": 79.0882365
+  },
+  {
+    "name": "Jaipur",
+    "code": "JP",
+    "city": "Jaipur",
+    "lat": 26.91962,
+    "lng": 75.78781
+  },
+  {
+    "name": "Lucknow NR",
+    "code": "LKO",
+    "city": "Lucknow",
+    "lat": 26.83928,
+    "lng": 80.92313
+  },
+  {
+    "name": "Kanpur Central",
+    "code": "CNB",
+    "city": "Kanpur",
+    "lat": 26.5,
+    "lng": 80
+  },
+  {
+    "name": "Varanasi Junction",
+    "code": "BSB",
+    "city": "Varanasi",
+    "lat": 25.3275678,
+    "lng": 82.986245
+  },
+  {
+    "name": "Patna Junction",
+    "code": "PNBE",
+    "city": "Patna",
+    "lat": 25.60222,
+    "lng": 85.11936
+  },
+  {
+    "name": "Bhopal Junction",
+    "code": "BPL",
+    "city": "Bhopal",
+    "lat": 23.25469,
+    "lng": 77.40289
+  },
+  {
+    "name": "Indore Junction",
+    "code": "INDB",
+    "city": "Indore",
+    "lat": 22.71792,
+    "lng": 75.8333
+  },
+  {
+    "name": "Surat",
+    "code": "ST",
+    "city": "Surat",
+    "lat": 21.2050337,
+    "lng": 72.8407079
+  },
+  {
+    "name": "Vadodara",
+    "code": "BRC",
+    "city": "Vadodara",
+    "lat": 22.3110728,
+    "lng": 73.1808008
+  },
+  {
+    "name": "Rajkot",
+    "code": "RJT",
+    "city": "Rajkot",
+    "lat": 22.29161,
+    "lng": 70.79322
+  },
+  {
+    "name": "Coimbatore",
+    "code": "CBE",
+    "city": "Coimbatore",
+    "lat": 10.9962357,
+    "lng": 76.9679417
+  },
+  {
+    "name": "Madurai",
+    "code": "MDU",
+    "city": "Madurai",
+    "lat": 9.91735,
+    "lng": 78.11962
+  },
+  {
+    "name": "Ernakulam Junction",
+    "code": "ERS",
+    "city": "Kochi",
+    "lat": 9.93988,
+    "lng": 76.26022
+  },
+  {
+    "name": "Vijayawada Junction",
+    "code": "BZA",
+    "city": "Vijayawada",
+    "lat": 16.5204153,
+    "lng": 80.6196802
+  },
+  {
+    "name": "Visakhapatnam",
+    "code": "VSKP",
+    "city": "Visakhapatnam",
+    "lat": 17.7219335,
+    "lng": 83.2912803
+  },
+  {
+    "name": "Guwahati",
+    "code": "GHY",
+    "city": "Guwahati",
+    "lat": 26.1821371,
+    "lng": 91.7507423
+  },
+  {
+    "name": "Ranchi",
+    "code": "RNC",
+    "city": "Ranchi",
+    "lat": 23.3499854,
+    "lng": 85.3361238
+  },
+  {
+    "name": "Jammu Tawi",
+    "code": "JAT",
+    "city": "Jammu",
+    "lat": 32.7067837,
+    "lng": 74.8806455
+  },
+  {
+    "name": "Amritsar",
+    "code": "ASR",
+    "city": "Amritsar",
+    "lat": 31.63661,
+    "lng": 74.87476
+  },
+  {
+    "name": "Chandigarh",
+    "code": "CDG",
+    "city": "Chandigarh",
+    "lat": 30.7021622,
+    "lng": 76.8214533
+  },
+  {
+    "name": "Dehradun",
+    "code": "DDN",
+    "city": "Dehradun",
+    "lat": 30.3124775,
+    "lng": 78.0334708
+  },
+  {
+    "name": "Haridwar",
+    "code": "HW",
+    "city": "Haridwar",
+    "lat": 29.94623,
+    "lng": 78.1528621
+  },
+  {
+    "name": "Agra Cantt",
+    "code": "AGC",
+    "city": "Agra",
+    "lat": 27.18333,
+    "lng": 78.01667
+  },
+  {
+    "name": "Mathura Junction",
+    "code": "MTJ",
+    "city": "Mathura",
+    "lat": 27.50199,
+    "lng": 77.6833
+  },
+  {
+    "name": "Allahabad Junction",
+    "code": "ALD",
+    "city": "Prayagraj",
+    "lat": 22,
+    "lng": 79
+  },
+  {
+    "name": "Gorakhpur",
+    "code": "GKP",
+    "city": "Gorakhpur",
+    "lat": 26.7592816,
+    "lng": 83.379318
+  },
+  {
+    "name": "Bareilly",
+    "code": "BE",
+    "city": "Bareilly",
+    "lat": 28.34702,
+    "lng": 79.42193
+  },
+  {
+    "name": "Jodhpur",
+    "code": "JU",
+    "city": "Jodhpur",
+    "lat": 26.75,
+    "lng": 72.75
+  },
+  {
+    "name": "Udaipur City",
+    "code": "UDZ",
+    "city": "Udaipur",
+    "lat": 24.57117,
+    "lng": 73.69183
+  },
+  {
+    "name": "Ajmer",
+    "code": "AII",
+    "city": "Ajmer",
+    "lat": 26.44976,
+    "lng": 74.64116
+  },
+  {
+    "name": "Kota Junction",
+    "code": "KOTA",
+    "city": "Kota",
+    "lat": 25.18254,
+    "lng": 75.83907
+  },
+  {
+    "name": "Gwalior",
+    "code": "GWL",
+    "city": "Gwalior",
+    "lat": 26.22983,
+    "lng": 78.17337
+  },
+  {
+    "name": "Jhansi Junction",
+    "code": "JHS",
+    "city": "Jhansi",
+    "lat": 25.45446,
+    "lng": 78.58221
+  },
+  {
+    "name": "Bilaspur",
+    "code": "BSP",
+    "city": "Bilaspur",
+    "lat": 22.38333,
+    "lng": 82.13333
+  },
+  {
+    "name": "Raipur",
+    "code": "R",
+    "city": "Raipur",
+    "lat": 21.2560954,
+    "lng": 81.6297323
+  },
+  {
+    "name": "Durg",
+    "code": "DURG",
+    "city": "Durg",
+    "lat": 21.18333,
+    "lng": 81.28333
+  },
+  {
+    "name": "Bhavnagar",
+    "code": "BVC",
+    "city": "Bhavnagar",
+    "lat": 21.66667,
+    "lng": 71.83333
+  },
+  {
+    "name": "Jalandhar City",
+    "code": "JUC",
+    "city": "Jalandhar",
+    "lat": 31.32556,
+    "lng": 75.57917
+  },
+  {
+    "name": "Ludhiana",
+    "code": "LDH",
+    "city": "Ludhiana",
+    "lat": 30.9128024,
+    "lng": 75.8481637
+  },
+  {
+    "name": "Moradabad",
+    "code": "MB",
+    "city": "Moradabad",
+    "lat": 28.78333,
+    "lng": 78.56667
+  },
+  {
+    "name": "Aligarh",
+    "code": "ALJN",
+    "city": "Aligarh",
+    "lat": 27.8888068,
+    "lng": 78.0747358
+  },
+  {
+    "name": "Meerut City",
+    "code": "MTC",
+    "city": "Meerut",
+    "lat": 28.97155,
+    "lng": 77.71934
+  },
+  {
+    "name": "Panipat",
+    "code": "PNP",
+    "city": "Panipat",
+    "lat": 29.39005,
+    "lng": 76.96949
+  },
+  {
+    "name": "Sonipat",
+    "code": "SNP",
+    "city": "Sonipat",
+    "lat": 28.99587,
+    "lng": 77.01165
+  },
+  {
+    "name": "Rohtak",
+    "code": "ROK",
+    "city": "Rohtak",
+    "lat": 28.89447,
+    "lng": 76.58917
+  },
+  {
+    "name": "Faridabad",
+    "code": "FDB",
+    "city": "Faridabad",
+    "lat": 28.41252,
+    "lng": 77.31977
+  },
+  {
+    "name": "Ghaziabad",
+    "code": "GZB",
+    "city": "Ghaziabad",
+    "lat": 28.66249,
+    "lng": 77.43777
+  },
+  {
+    "name": "Noida",
+    "code": "NOIDA",
+    "city": "Noida",
+    "lat": 28.58,
+    "lng": 77.33
+  },
+  {
+    "name": "Anand Vihar",
+    "code": "ANVT",
+    "city": "Delhi",
+    "lat": 28.65381,
+    "lng": 77.22897
+  },
+  {
+    "name": "Kharagpur",
+    "code": "KGP",
+    "city": "Kharagpur",
+    "lat": 22.33971,
+    "lng": 87.32501
+  },
+  {
+    "name": "Asansol",
+    "code": "ASN",
+    "city": "Asansol",
+    "lat": 23.68333,
+    "lng": 86.98333
+  },
+  {
+    "name": "Dhanbad",
+    "code": "DHN",
+    "city": "Dhanbad",
+    "lat": 23.80199,
+    "lng": 86.44324
+  },
+  {
+    "name": "Barddhaman",
+    "code": "BWN",
+    "city": "Barddhaman",
+    "lat": 23.25572,
+    "lng": 87.85691
+  },
+  {
+    "name": "Siliguri",
+    "code": "SGUJ",
+    "city": "Siliguri",
+    "lat": 26.71004,
+    "lng": 88.42851
+  },
+  {
+    "name": "Tirupati",
+    "code": "TPTY",
+    "city": "Tirupati",
+    "lat": 13.63551,
+    "lng": 79.41989
+  },
+  {
+    "name": "Warangal",
+    "code": "WL",
+    "city": "Warangal",
+    "lat": 18,
+    "lng": 79.83333
+  },
+  {
+    "name": "Nashik Road",
+    "code": "NK",
+    "city": "Nashik",
+    "lat": 19.9481228,
+    "lng": 73.8412959
+  },
+  {
+    "name": "Aurangabad",
+    "code": "AWB",
+    "city": "Aurangabad",
+    "lat": 19.8597998,
+    "lng": 75.3114008
+  },
+  {
+    "name": "Kolhapur",
+    "code": "KOP",
+    "city": "Kolhapur",
+    "lat": 16.7023332,
+    "lng": 74.2382556
+  },
+  {
+    "name": "Solapur",
+    "code": "SUR",
+    "city": "Solapur",
+    "lat": 17.6657999,
+    "lng": 75.8938407
+  },
+  {
+    "name": "Hubli",
+    "code": "UBL",
+    "city": "Hubli",
+    "lat": 15.3523233,
+    "lng": 75.1455962
+  },
+  {
+    "name": "Mysore",
+    "code": "MYS",
+    "city": "Mysore",
+    "lat": 14.66667,
+    "lng": 75.83333
+  },
+  {
+    "name": "Salem",
+    "code": "SA",
+    "city": "Salem",
+    "lat": 11.65117,
+    "lng": 78.15867
+  },
+  {
+    "name": "Erode",
+    "code": "ED",
+    "city": "Erode",
+    "lat": 11.3428,
+    "lng": 77.72741
+  },
+  {
+    "name": "Kanyakumari",
+    "code": "CAPE",
+    "city": "Kanyakumari",
+    "lat": 8.32,
+    "lng": 77.34
+  },
+  {
+    "name": "Alappuzha",
+    "code": "ALLP",
+    "city": "Alappuzha",
+    "lat": 9.4863293,
+    "lng": 76.3217143
+  },
+  {
+    "name": "Thrissur",
+    "code": "TCR",
+    "city": "Thrissur",
+    "lat": 10.5160531,
+    "lng": 76.2084506
+  },
+  {
+    "name": "Ujjain",
+    "code": "UJN",
+    "city": "Ujjain",
+    "lat": 23.41667,
+    "lng": 75.5
+  },
+  {
+    "name": "Satna",
+    "code": "STA",
+    "city": "Satna",
+    "lat": 24.56883,
+    "lng": 80.8283
+  },
+  {
+    "name": "Jabalpur",
+    "code": "JBP",
+    "city": "Jabalpur",
+    "lat": 23.1675149,
+    "lng": 79.9491848
+  },
+  {
+    "name": "Rewa",
+    "code": "REWA",
+    "city": "Rewa",
+    "lat": 24.5436848,
+    "lng": 81.2744984
+  },
+  {
+    "name": "Katni",
+    "code": "KTE",
+    "city": "Katni",
+    "lat": 23.83677,
+    "lng": 80.39482
+  },
+  {
+    "name": "Tatanagar",
+    "code": "TATA",
+    "city": "Jamshedpur",
+    "lat": 22.80278,
+    "lng": 86.18545
+  },
+  {
+    "name": "Bokaro Steel City",
+    "code": "BKSC",
+    "city": "Bokaro",
+    "lat": 23.78732,
+    "lng": 85.95622
+  },
+  {
+    "name": "Thiruvananthapuram Central",
+    "code": "TVC",
+    "city": "Thiruvananthapuram",
+    "lat": 8.4855,
+    "lng": 76.94924
+  },
+  {
+    "name": "Kochuveli",
+    "code": "KCVL",
+    "city": "Thiruvananthapuram",
+    "lat": 8.4998069,
+    "lng": 76.8996398
+  },
+  {
+    "name": "Varkala Sivagiri",
+    "code": "VAK",
+    "city": "Varkala",
+    "lat": 8.7333,
+    "lng": 76.7167
+  },
+  {
+    "name": "Kollam Junction",
+    "code": "QLN",
+    "city": "Kollam",
+    "lat": 8.8861054,
+    "lng": 76.5957979
+  },
+  {
+    "name": "Karunagappally",
+    "code": "KPY",
+    "city": "Karunagappally",
+    "lat": 22,
+    "lng": 79
+  },
+  {
+    "name": "Kayamkulam Junction",
+    "code": "KYJ",
+    "city": "Kayamkulam",
+    "lat": 9.1813015,
+    "lng": 76.5121004
+  },
+  {
+    "name": "Harippad",
+    "code": "HAD",
+    "city": "Harippad",
+    "lat": 9.2835711,
+    "lng": 76.460917
+  },
+  {
+    "name": "Cherthala",
+    "code": "SRTL",
+    "city": "Cherthala",
+    "lat": 9.6906983,
+    "lng": 76.3259977
+  },
+  {
+    "name": "Ernakulam Town",
+    "code": "ERN",
+    "city": "Kochi",
+    "lat": 9.93988,
+    "lng": 76.26022
+  },
+  {
+    "name": "Aluva",
+    "code": "AWY",
+    "city": "Aluva",
+    "lat": 10.1080369,
+    "lng": 76.3563183
+  },
+  {
+    "name": "Angamaly",
+    "code": "AFK",
+    "city": "Angamaly",
+    "lat": 10.2264409,
+    "lng": 76.3739316
+  },
+  {
+    "name": "Chalakudy",
+    "code": "CKI",
+    "city": "Chalakudy",
+    "lat": 10.3057333,
+    "lng": 76.3339683
+  },
+  {
+    "name": "Guruvayur",
+    "code": "GUV",
+    "city": "Guruvayur",
+    "lat": 10.5972547,
+    "lng": 76.0459241
+  },
+  {
+    "name": "Shoranur Junction",
+    "code": "SRR",
+    "city": "Shoranur",
+    "lat": 10.76097,
+    "lng": 76.27001
+  },
+  {
+    "name": "Ottappalam",
+    "code": "OTP",
+    "city": "Ottappalam",
+    "lat": 10.7698093,
+    "lng": 76.3777089
+  },
+  {
+    "name": "Palakkad Junction",
+    "code": "PGT",
+    "city": "Palakkad",
+    "lat": 10.7993322,
+    "lng": 76.6375989
+  },
+  {
+    "name": "Palakkad Town",
+    "code": "PGTN",
+    "city": "Palakkad",
+    "lat": 10.7760551,
+    "lng": 76.6522877
+  },
+  {
+    "name": "Kozhikode",
+    "code": "CLT",
+    "city": "Kozhikode",
+    "lat": 11.1773102,
+    "lng": 75.8318045
+  },
+  {
+    "name": "Ferok",
+    "code": "FK",
+    "city": "Ferok",
+    "lat": 11.17989,
+    "lng": 75.84141
+  },
+  {
+    "name": "Koyilandy",
+    "code": "QLD",
+    "city": "Koyilandy",
+    "lat": 11.4418481,
+    "lng": 75.6954902
+  },
+  {
+    "name": "Vadakara",
+    "code": "BDJ",
+    "city": "Vadakara",
+    "lat": 11.5934138,
+    "lng": 75.5870811
+  },
+  {
+    "name": "Mahe",
+    "code": "MAHE",
+    "city": "Mahe",
+    "lat": 11.69899,
+    "lng": 75.5465396
+  },
+  {
+    "name": "Thalassery",
+    "code": "TLY",
+    "city": "Thalassery",
+    "lat": 11.7537453,
+    "lng": 75.492465
+  },
+  {
+    "name": "Kannur",
+    "code": "CAN",
+    "city": "Kannur",
+    "lat": 11.8715009,
+    "lng": 75.3684406
+  },
+  {
+    "name": "Payyanur",
+    "code": "PAY",
+    "city": "Payyanur",
+    "lat": 12.0910795,
+    "lng": 75.1946515
+  },
+  {
+    "name": "Kasaragod",
+    "code": "KGQ",
+    "city": "Kasaragod",
+    "lat": 12.4906615,
+    "lng": 74.9885144
+  },
+  {
+    "name": "Manjeshwar",
+    "code": "MJS",
+    "city": "Manjeshwar",
+    "lat": 12.71197,
+    "lng": 74.89014
+  },
+  {
+    "name": "Changanassery",
+    "code": "CGY",
+    "city": "Changanassery",
+    "lat": 9.4484386,
+    "lng": 76.5493799
+  },
+  {
+    "name": "Kottayam",
+    "code": "KTYM",
+    "city": "Kottayam",
+    "lat": 9.5948345,
+    "lng": 76.5317478
+  },
+  {
+    "name": "Thiruvalla",
+    "code": "TRVL",
+    "city": "Thiruvalla",
+    "lat": 9.3925672,
+    "lng": 76.5798493
+  },
+  {
+    "name": "Chengannur",
+    "code": "CNGR",
+    "city": "Chengannur",
+    "lat": 9.3182808,
+    "lng": 76.6085318
+  },
+  {
+    "name": "Punalur",
+    "code": "PUU",
+    "city": "Punalur",
+    "lat": 9.0227095,
+    "lng": 76.9164366
+  },
+  {
+    "name": "Kanhangad",
+    "code": "KZE",
+    "city": "Kanhangad",
+    "lat": 12.3204828,
+    "lng": 75.0849288
+  },
+  {
+    "name": "Nilambur Road",
+    "code": "NIL",
+    "city": "Nilambur",
+    "lat": 11.2798926,
+    "lng": 76.253112
+  },
+  {
+    "name": "Tanur",
+    "code": "TA",
+    "city": "Tanur",
+    "lat": 10.9780888,
+    "lng": 75.881498
+  },
+  {
+    "name": "Parappanangadi",
+    "code": "PGI",
+    "city": "Parappanangadi",
+    "lat": 11.088219,
+    "lng": 75.859341
+  },
+  {
+    "name": "Tirur",
+    "code": "TIR",
+    "city": "Tirur",
+    "lat": 10.9178187,
+    "lng": 75.9217456
+  },
+  {
+    "name": "Mavelikara",
+    "code": "MVLK",
+    "city": "Mavelikara",
+    "lat": 9.25929,
+    "lng": 76.55642
+  },
+  {
+    "name": "Ambalappuzha",
+    "code": "AMPA",
+    "city": "Ambalappuzha",
+    "lat": 9.3862866,
+    "lng": 76.3627219
+  },
+  {
+    "name": "Vaikom Road",
+    "code": "VARD",
+    "city": "Vaikom",
+    "lat": 9.74713,
+    "lng": 76.39522
+  },
+  {
+    "name": "Piravom Road",
+    "code": "PVRD",
+    "city": "Piravom",
+    "lat": 9.86667,
+    "lng": 76.5
+  },
+  {
+    "name": "Tripunithura",
+    "code": "TRTR",
+    "city": "Tripunithura",
+    "lat": 22,
+    "lng": 79
+  },
+  {
+    "name": "Edappally",
+    "code": "IPL",
+    "city": "Kochi",
+    "lat": 9.93988,
+    "lng": 76.26022
+  },
+  {
+    "name": "Perumbavoor",
+    "code": "PBVR",
+    "city": "Perumbavoor",
+    "lat": 10.10695,
+    "lng": 76.47366
+  },
+  {
+    "name": "Wadakkanchery",
+    "code": "WKI",
+    "city": "Wadakkanchery",
+    "lat": 22,
+    "lng": 79
+  },
+  {
+    "name": "Kuttippuram",
+    "code": "KTU",
+    "city": "Kuttippuram",
+    "lat": 10.845727,
+    "lng": 76.033311
+  },
+  {
+    "name": "Pattambi",
+    "code": "PTB",
+    "city": "Pattambi",
+    "lat": 10.8022383,
+    "lng": 76.1809281
+  },
+  {
+    "name": "Parasnath",
+    "code": "PNME",
+    "city": "Parasnath",
+    "lat": 23.9879,
+    "lng": 86.0375
+  },
+  {
+    "name": "Prayagraj Junction",
+    "code": "PRYJ",
+    "city": "Prayagraj",
+    "lat": 25.446,
+    "lng": 81.8289
+  },
+  {
+    "name": "Khammam",
+    "code": "KMT",
+    "city": "Khammam",
+    "lat": 17.2493,
+    "lng": 80.1385
+  },
+  {
+    "name": "Balharshah",
+    "code": "BPQ",
+    "city": "Balharshah",
+    "lat": 19.849,
+    "lng": 79.348
+  },
+  {
+    "name": "Itarsi Junction",
+    "code": "ET",
+    "city": "Itarsi",
+    "lat": 22.608,
+    "lng": 77.767
+  },
+  {
+    "name": "Virangana Lakshmibai Jhansi",
+    "code": "VGLJ",
+    "city": "Jhansi",
+    "lat": 25.4439,
+    "lng": 78.5534
+  },
+  {
+    "name": "TIRUPPUR",
+    "code": "TUP",
+    "lat": 11.108906,
+    "lng": 77.341247,
+    "state": null
+  },
+  {
+    "name": "JOLARPETTAI",
+    "code": "JTJ",
+    "lat": 12.560851999999999,
+    "lng": 78.57781999999999,
+    "state": null
+  },
+  {
+    "name": "KATPADI JN",
+    "code": "KPD",
+    "lat": 12.972734,
+    "lng": 79.13534100000001,
+    "state": null
+  },
+  {
+    "name": "CHITTOOR",
+    "code": "CTO",
+    "lat": 13.219857,
+    "lng": 79.103252,
+    "state": null
+  },
+  {
+    "name": "RENIGUNTA JN",
+    "code": "RU",
+    "lat": 13.636261,
+    "lng": 79.50628999999999,
+    "state": null
+  },
+  {
+    "name": "GUDUR JN",
+    "code": "GDR",
+    "lat": 14.148227,
+    "lng": 79.845121,
+    "state": null
+  },
+  {
+    "name": "NELLORE",
+    "code": "NLR",
+    "lat": 14.460592,
+    "lng": 79.989383,
+    "state": null
+  },
+  {
+    "name": "RAMGUNDAM",
+    "code": "RDM",
+    "lat": 18.763329,
+    "lng": 79.43509999999999,
+    "state": null
+  },
+  {
+    "name": "SIRPUR KAGAZNAGAR",
+    "code": "SKZR",
+    "lat": 19.345659,
+    "lng": 79.489201,
+    "state": null
+  },
+  {
+    "name": "CHANDRAPUR",
+    "code": "CD",
+    "lat": 19.960126000000002,
+    "lng": 79.300505,
+    "state": null
+  },
+  {
+    "name": "SEVAGRAM",
+    "code": "SEGM",
+    "lat": 20.739076,
+    "lng": 78.619225,
+    "state": null
+  },
+  {
+    "name": "BINA JN",
+    "code": "BINA",
+    "lat": 24.170973500000002,
+    "lng": 78.1831998,
+    "state": null
+  },
+  {
+    "name": "PAYANGADI",
+    "code": "PAZ",
+    "lat": 12.021507999999999,
+    "lng": 75.2596,
+    "state": "Kerala"
+  },
+  {
+    "name": "NILESHWAR",
+    "code": "NLE",
+    "lat": 12.255885000000001,
+    "lng": 75.13575,
+    "state": "Kerala"
+  },
+  {
+    "name": "MANGALORE JN",
+    "code": "MAJN",
+    "lat": 12.866193,
+    "lng": 74.88006,
+    "state": "Karnataka"
+  },
+  {
+    "name": "UDUPI",
+    "code": "UD",
+    "lat": 13.336341000000001,
+    "lng": 74.771733,
+    "state": "Karnataka"
+  },
+  {
+    "name": "KUNDAPURA",
+    "code": "KUDA",
+    "lat": 13.612909,
+    "lng": 74.728366,
+    "state": "Karnataka"
+  },
+  {
+    "name": "BHATKAL",
+    "code": "BTJL",
+    "lat": 13.98866,
+    "lng": 74.5655589,
+    "state": "Karnataka"
+  },
+  {
+    "name": "KUMTA",
+    "code": "KT",
+    "lat": 14.436871,
+    "lng": 74.420652,
+    "state": "Karnataka"
+  },
+  {
+    "name": "KARWAR",
+    "code": "KAWR",
+    "lat": 14.821387,
+    "lng": 74.183139,
+    "state": "Karnataka"
+  },
+  {
+    "name": "MADGAON",
+    "code": "MAO",
+    "lat": 15.267911000000002,
+    "lng": 73.97072399999999,
+    "state": "Goa"
+  },
+  {
+    "name": "THIVIM",
+    "code": "THVM",
+    "lat": 15.62955,
+    "lng": 73.87610400000001,
+    "state": "Goa"
+  },
+  {
+    "name": "KANKAVALI",
+    "code": "KKW",
+    "lat": 16.2587773,
+    "lng": 73.71987089999999,
+    "state": "Maharashtra"
+  },
+  {
+    "name": "RATNAGIRI",
+    "code": "RN",
+    "lat": 17.002793,
+    "lng": 73.356938,
+    "state": "Maharashtra"
+  },
+  {
+    "name": "CHIPLUN",
+    "code": "CHI",
+    "lat": 17.542507399999998,
+    "lng": 73.522429,
+    "state": "Maharashtra"
+  },
+  {
+    "name": "KHED",
+    "code": "KHED",
+    "lat": 17.712059,
+    "lng": 73.40881499999999,
+    "state": "Maharashtra"
+  },
+  {
+    "name": "PANVEL",
+    "code": "PNVL",
+    "lat": 18.990918999999998,
+    "lng": 73.121756,
+    "state": "Maharashtra"
+  },
+  {
+    "name": "KALYAN JN",
+    "code": "KYN",
+    "lat": 19.234716000000002,
+    "lng": 73.12974,
+    "state": null
+  },
+  {
+    "name": "IGATPURI",
+    "code": "IGP",
+    "lat": 19.694053,
+    "lng": 73.56237899999999,
+    "state": null
+  },
+  {
+    "name": "MANMAD JN",
+    "code": "MMR",
+    "lat": 20.249887,
+    "lng": 74.438305,
+    "state": null
+  },
+  {
+    "name": "BHUSAVAL JN",
+    "code": "BSL",
+    "lat": 21.0472812,
+    "lng": 75.78867170000001,
+    "state": null
+  },
+  {
+    "name": "BURHANPUR",
+    "code": "BAU",
+    "lat": 21.3343976,
+    "lng": 76.1986787,
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "KHANDWA",
+    "code": "KNW",
+    "lat": 21.823596,
+    "lng": 76.353227,
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "MORENA",
+    "code": "MRA",
+    "lat": 26.500504,
+    "lng": 78.003442,
+    "state": null
+  },
+  {
+    "name": "DIVINE NAGAR",
+    "code": "DINR",
+    "lat": 10.2853993721,
+    "lng": 76.3363143628,
+    "state": null
+  },
+  {
+    "name": "KANNAPURAM",
+    "code": "KPQ",
+    "lat": 11.984076,
+    "lng": 75.31381,
+    "state": "Kerala"
+  },
+  {
+    "name": "CHARVATTUR",
+    "code": "CHV",
+    "lat": 12.213321,
+    "lng": 75.15435,
+    "state": "Kerala"
+  },
+  {
+    "name": "SURATHKAL",
+    "code": "SL",
+    "lat": 12.989191,
+    "lng": 74.80617699999999,
+    "state": "Karnataka"
+  },
+  {
+    "name": "MOOKAMBIKA ROAD",
+    "code": "BYNR",
+    "lat": 13.87259,
+    "lng": 74.63279,
+    "state": "Karnataka"
+  },
+  {
+    "name": "MURDESHWAR",
+    "code": "MRDW",
+    "lat": 14.100277,
+    "lng": 74.50524700000001,
+    "state": "Karnataka"
+  },
+  {
+    "name": "CANCONA",
+    "code": "CNO",
+    "lat": 15.006905999999999,
+    "lng": 74.039454,
+    "state": "Goa"
+  },
+  {
+    "name": "KARMALI",
+    "code": "KRMI",
+    "lat": 15.490212900000001,
+    "lng": 73.9246644,
+    "state": "Goa"
+  },
+  {
+    "name": "KUDAL",
+    "code": "KUDL",
+    "lat": 16.017651,
+    "lng": 73.67813000000001,
+    "state": "Maharashtra"
+  },
+  {
+    "name": "RAJAPUR ROAD",
+    "code": "RAJP",
+    "lat": 16.635175,
+    "lng": 73.626565,
+    "state": "Maharashtra"
+  },
+  {
+    "name": "SANGMESHWAR",
+    "code": "SGR",
+    "lat": 17.201998999999997,
+    "lng": 73.546234,
+    "state": "Maharashtra"
+  },
+  {
+    "name": "ROHA",
+    "code": "ROHA",
+    "lat": 18.44649043,
+    "lng": 73.12357712000001,
+    "state": "Maharashtra"
+  },
+  {
+    "name": "THANE",
+    "code": "TNA",
+    "lat": 19.185757000000002,
+    "lng": 72.97541700000001,
+    "state": null
+  },
+  {
+    "name": "NAGERCOIL JN",
+    "code": "NCJ",
+    "lat": 8.17385,
+    "lng": 77.44347,
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "ERANIEL",
+    "code": "ERL",
+    "lat": 8.212549,
+    "lng": 77.308161,
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "KULITTHURAI",
+    "code": "KZT",
+    "lat": 8.302348,
+    "lng": 77.218817,
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "PARASHSHALA",
+    "code": "PASA",
+    "lat": 8.3398400051,
+    "lng": 77.16548966,
+    "state": "Kerala"
+  },
+  {
+    "name": "NEYYATTINKARA",
+    "code": "NYY",
+    "lat": 8.41041,
+    "lng": 77.08111000000001,
+    "state": "Kerala"
+  },
+  {
+    "name": "KAZHAKUTTAM",
+    "code": "KZK",
+    "lat": 8.555848000000001,
+    "lng": 76.872235,
+    "state": null
+  },
+  {
+    "name": "CHIRAYINKIL",
+    "code": "CRY",
+    "lat": 8.658337900000001,
+    "lng": 76.7853703,
+    "state": null
+  },
+  {
+    "name": "KADAKAVUR",
+    "code": "KVU",
+    "lat": 8.679078,
+    "lng": 76.766672,
+    "state": null
+  },
+  {
+    "name": "PARAVUR",
+    "code": "PVU",
+    "lat": 8.815758,
+    "lng": 76.66823799999999,
+    "state": null
+  },
+  {
+    "name": "SASTHANKOTTA",
+    "code": "STKT",
+    "lat": 9.0323103106,
+    "lng": 76.59888294679999,
+    "state": null
+  },
+  {
+    "name": "IRINJALAKUDA",
+    "code": "IJK",
+    "lat": 10.339456,
+    "lng": 76.280924,
+    "state": null
+  },
+  {
+    "name": "PUDUKAD",
+    "code": "PUK",
+    "lat": 10.420507,
+    "lng": 76.26070700000001,
+    "state": null
+  },
+  {
+    "name": "TIRUPATTUR JN",
+    "code": "TPT",
+    "lat": 12.497951,
+    "lng": 78.561419,
+    "state": null
+  },
+  {
+    "name": "KUPPAM",
+    "code": "KPN",
+    "lat": 12.746834,
+    "lng": 78.339549,
+    "state": null
+  },
+  {
+    "name": "BANGARAPET",
+    "code": "BWT",
+    "lat": 12.984808,
+    "lng": 78.178188,
+    "state": null
+  },
+  {
+    "name": "MALUR",
+    "code": "MLO",
+    "lat": 12.992108,
+    "lng": 77.940033,
+    "state": null
+  },
+  {
+    "name": "WHITEFIELD",
+    "code": "WFD",
+    "lat": 12.995253,
+    "lng": 77.76130500000001,
+    "state": null
+  },
+  {
+    "name": "KRISHNARAJAPURAM",
+    "code": "KJM",
+    "lat": 13.000534,
+    "lng": 77.674016,
+    "state": null
+  },
+  {
+    "name": "BANGALORE EAST",
+    "code": "BNCE",
+    "lat": 13.001479999999999,
+    "lng": 77.6184701,
+    "state": "Karnataka"
+  },
+  {
+    "name": "BANGALORE CANT",
+    "code": "BNC",
+    "lat": 12.9936735,
+    "lng": 77.59932690000001,
+    "state": "Karnataka"
+  },
+  {
+    "name": "MURUKKAMPUZHA",
+    "code": "MQU",
+    "lat": 8.613629999999999,
+    "lng": 76.830245,
+    "state": null
+  },
+  {
+    "name": "VALAPATTANAM",
+    "code": "VAPM",
+    "lat": 11.927728,
+    "lng": 75.346365,
+    "state": "Kerala"
+  },
+  {
+    "name": "ELIMALA",
+    "code": "ELM",
+    "lat": 12.0686868024,
+    "lng": 75.2308476031,
+    "state": "Kerala"
+  },
+  {
+    "name": "TRIKARPUR",
+    "code": "TKQ",
+    "lat": 12.142185,
+    "lng": 75.176143,
+    "state": "Kerala"
+  },
+  {
+    "name": "BEKAL FORT",
+    "code": "BFR",
+    "lat": 12.385524,
+    "lng": 75.04278599999999,
+    "state": "Kerala"
+  },
+  {
+    "name": "KOTIKULAM",
+    "code": "KQK",
+    "lat": 12.423507,
+    "lng": 75.024008,
+    "state": "Kerala"
+  },
+  {
+    "name": "KUMBLA",
+    "code": "KMQ",
+    "lat": 12.590263,
+    "lng": 74.943503,
+    "state": "Kerala"
+  },
+  {
+    "name": "UPPALA",
+    "code": "UAA",
+    "lat": 12.6698,
+    "lng": 74.906488,
+    "state": "Kerala"
+  },
+  {
+    "name": "ULLAL",
+    "code": "ULL",
+    "lat": 12.791319999999999,
+    "lng": 74.85477900000001,
+    "state": "Karnataka"
+  },
+  {
+    "name": "MANGALORE CNTL",
+    "code": "MAQ",
+    "lat": 12.862325,
+    "lng": 74.844068,
+    "state": "Karnataka"
+  },
+  {
+    "name": "TRIVANDRUM PETTAI",
+    "code": "TVP",
+    "lat": 8.494524,
+    "lng": 76.931673,
+    "state": null
+  },
+  {
+    "name": "MAYYANAD",
+    "code": "MYY",
+    "lat": 8.837759,
+    "lng": 76.64733100000001,
+    "state": null
+  },
+  {
+    "name": "CHERIYANAD",
+    "code": "CYN",
+    "lat": 9.273119000000001,
+    "lng": 76.585087,
+    "state": null
+  },
+  {
+    "name": "ETTUMANUR",
+    "code": "ETM",
+    "lat": 9.676196000000001,
+    "lng": 76.545152,
+    "state": null
+  },
+  {
+    "name": "CHARLAPALLI",
+    "code": "CHZ",
+    "lat": 17.457672000000002,
+    "lng": 78.605619,
+    "state": null
+  },
+  {
+    "name": "NALGONDA",
+    "code": "NLDA",
+    "lat": 17.06118,
+    "lng": 79.283436,
+    "state": null
+  },
+  {
+    "name": "MIRYALAGUDA",
+    "code": "MRGA",
+    "lat": 16.860392,
+    "lng": 79.533503,
+    "state": null
+  },
+  {
+    "name": "NADIKODE",
+    "code": "NDKD",
+    "lat": 16.590634,
+    "lng": 79.72356500000001,
+    "state": null
+  },
+  {
+    "name": "PIDUGURALLA",
+    "code": "PGRL",
+    "lat": 16.477787000000003,
+    "lng": 79.876294,
+    "state": null
+  },
+  {
+    "name": "SATTENAPALLE",
+    "code": "SAP",
+    "lat": 16.405018,
+    "lng": 80.152704,
+    "state": null
+  },
+  {
+    "name": "GUNTUR JN",
+    "code": "GNT",
+    "lat": 16.300784,
+    "lng": 80.44197299999999,
+    "state": null
+  },
+  {
+    "name": "TENALI JN",
+    "code": "TEL",
+    "lat": 16.242409000000002,
+    "lng": 80.640413,
+    "state": null
+  },
+  {
+    "name": "NIDUBROLU",
+    "code": "NDO",
+    "lat": 16.067904,
+    "lng": 80.557243,
+    "state": null
+  },
+  {
+    "name": "BAPATLA",
+    "code": "BPP",
+    "lat": 15.9086144,
+    "lng": 80.46842480000001,
+    "state": null
+  },
+  {
+    "name": "CHIRALA",
+    "code": "CLX",
+    "lat": 15.830755,
+    "lng": 80.353602,
+    "state": null
+  },
+  {
+    "name": "ONGOLE",
+    "code": "OGL",
+    "lat": 15.498064000000001,
+    "lng": 80.057404,
+    "state": null
+  },
+  {
+    "name": "SINGARAYAKONDA",
+    "code": "SKM",
+    "lat": 15.253117999999999,
+    "lng": 80.027126,
+    "state": null
+  },
+  {
+    "name": "TURAVUR",
+    "code": "TUVR",
+    "lat": 9.772809,
+    "lng": 76.309979,
+    "state": null
+  },
+  {
+    "name": "TIRUNNAVAYA",
+    "code": "TUA",
+    "lat": 10.874721,
+    "lng": 75.985675,
+    "state": "Kerala"
+  },
+  {
+    "name": "PAYYOLI",
+    "code": "PYOL",
+    "lat": 11.516715999999999,
+    "lng": 75.617595,
+    "state": "Kerala"
+  }
+]
